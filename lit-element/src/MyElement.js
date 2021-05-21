@@ -1,4 +1,5 @@
 import { html, css, LitElement } from 'lit-element';
+import '../my-other-element.js'
 
 export class MyElement extends LitElement {
   static get styles() {
@@ -32,6 +33,7 @@ export class MyElement extends LitElement {
     return html`
       <h2>${this.title} Nr. ${this.counter}!</h2>
       <button @click=${this.__increment}>increment</button>
+      <my-other-element></my-other-element>
     `;
   }
 }
